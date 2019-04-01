@@ -64,6 +64,8 @@
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Enemy2.cs" />
     <Compile Include="Assets\EnemyFollow.cs" />
+    <Compile Include="Assets\LevelSelector.cs" />
+    <Compile Include="Assets\MenuManager.cs" />
     <Compile Include="Assets\Scripts\CameraFollower.cs" />
     <Compile Include="Assets\Scripts\GameManagerControl.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />

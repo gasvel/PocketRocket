@@ -57,6 +57,10 @@ public class PlayerScript : MonoBehaviour {
         slider.maxValue = fuel;
         this.gravity = this.rigi.gravityScale;
         game = gameMan.GetComponent<GameManagerControl>();
+
+#if UNITY_EDITOR
+        mobileJoy = false;
+#endif
         if (!mobileJoy)
         {
             joystick.SetActive(false);
@@ -82,8 +86,8 @@ public class PlayerScript : MonoBehaviour {
         float moveVertical;
         if (this.mobileJoy)
         {
-            moveHorizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            moveVertical = CrossPlatformInputManager.GetAxis("Vertical");
+            moveHorizontal = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+            moveVertical = CrossPlatformInputManager.GetAxisRaw("Vertical");
         }
         else
         {
@@ -166,15 +170,15 @@ public class PlayerScript : MonoBehaviour {
 
     private void JoystickMovement()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Boost"))
+        if (CrossPlatformInputManager.GetButton("Boost"))
         {
             boostAudio.volume = 0.6f;
             boostAudio.Play();
         }
-        if (CrossPlatformInputManager.GetButtonDown("Boost") && fuel > 0)
+        if (CrossPlatformInputManager.GetButton("Boost") && fuel > 0)
         {
 
-            rigi.velocity = transform.up * force;
+            rigi.velocity = transform.up * force*Time.deltaTime;
             anim.SetBool("PowerOn", true);
             fuel -= fuelConsumption;
         }
@@ -197,7 +201,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space) && fuel > 0)
         {
             
-            rigi.velocity = transform.up * Mathf.Lerp(0.1f, force, forceV); ;
+            rigi.velocity = transform.up * force*Time.deltaTime ;
             anim.SetBool("PowerOn", true);
             fuel -= fuelConsumption;
         }

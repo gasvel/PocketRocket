@@ -61,11 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
-    <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
-    <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
-    <Compile Include="Assets\Standard Assets\2D\Scripts\Restarter.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
@@ -77,7 +72,6 @@
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-    <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Gaston/Documents/Juego/Minion2Platformer/PocketRocket/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
